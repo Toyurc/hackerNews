@@ -1,0 +1,19 @@
+.nav {
+  height: 8vh;
+  background-color: #000060;
+  padding: 10px 20px;
+  border-radius: 2px; }
+
+.url-links {
+  list-style: none;
+  float: right; }
+  .url-links li {
+    display: inline-block;
+    margin: 4px 8px;
+    color: #f2f2f2; }
+    .url-links li:hover {
+      color: red; }
+  .url-links .button {
+    padding: 4px;
+    background-color: #000040;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.452); }
