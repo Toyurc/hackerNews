@@ -3,6 +3,13 @@
   background-color: #000060;
   padding: 10px 20px;
   border-radius: 2px; }
+  .nav span {
+    float: right;
+    display: none;
+    color: #f1f1f1; }
+  @media screen and (max-width: 767px) {
+    .nav span {
+      display: inline-block; } }
 
 .url-links {
   list-style: none;
@@ -17,3 +24,38 @@
     padding: 4px;
     background-color: #000040;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.452); }
+  @media screen and (max-width: 767px) {
+    .url-links li {
+      display: none; } }
+
+.mobile {
+  text-transform: uppercase;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #000000cb;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px; }
+  .mobile a {
+    font-size: 12px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s; }
+    .mobile a:hover {
+      color: #f1f1f1; }
+    .mobile a:not(:first-child) {
+      width: 80%;
+      margin: 0 auto;
+      border-bottom: 1px solid #f2f2f2; }
+  .mobile .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px; }

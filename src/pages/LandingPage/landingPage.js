@@ -1,27 +1,17 @@
 import React from 'react';
-import './landingPage.scss';
+import './landingPage.css';
 import NavBar from '../../components/NavBar/navBar';
 import Axios from 'axios';
-
-const Card = () => {
-    <div className="card">
-        <div>
-            <img src="" alt="alt" />
-        </div>
-        <div>
-            <h4>Title</h4>
-            <p>Description Lorem ipsm blah blah</p>
-            <h6>date</h6>
-        </div>
-    </div>
-};
+import Card from '../../components/Card/card';
 
 class LandingPage extends React.Component {
     constructor (props) {
         super(props);
+
         this.state = {
-            News: [],
+            news: [],
         };
+        this.fetchNews = this.fetchNews.bind(this);
     }
 
     componentWillMount () {
@@ -31,15 +21,13 @@ class LandingPage extends React.Component {
     fetchNews() {
         Axios
             .get('https://newsapi.org/v2/top-headlines?sources=hacker-news&apiKey=a97f73800a884fdcb3a1abf8a3d229f8')
-            .then(function (response) {
-                if(response.data && response.status === 200){
-                    this.setState ({
-                      News:response.data.articles,
-                    });
-                }
-                console.log(response);
+            .then(response =>  {
+                this.setState ({
+                    news: response.data.articles,
+                  });
+                console.log(this.state.news[0]);
             })
-            .catch(function (error) {
+            .catch(error => {
                 // handle error
                 console.log(error);
             });
@@ -47,11 +35,27 @@ class LandingPage extends React.Component {
 
     render () {
         return (
-            <div>
+            <React.Fragment>
                 <NavBar/>
-                <Card />
+                <React.Fragment>
+                    <div className="background" >
+                        {this.state.news.map((props, index) => (
+                            <div className="card card-width" key={index}>
+                                <div className="image">
+                                    <img src={props.urlToImage} alt="alt" height="160px;" width="180px;" />
+                                </div>
+                                <div className="details">
+                                    <h4>{props.title}</h4>
+                                    <p>{props.description}</p>
+                                    <h6>{props.publishedAt}</h6>
+                                </div>
+                            </div>
+                        ))
+                        }
+                    </div>
+                </React.Fragment>
                 <footer />
-            </div>
+            </React.Fragment>
         );
     }
 

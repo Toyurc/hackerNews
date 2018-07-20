@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import NavBar from '../src/components/NavBar/navBar'
 import './App.css';
 import LandingPage from './pages/LandingPage/landingPage';
 
