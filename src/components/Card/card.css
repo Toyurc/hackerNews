@@ -1,5 +1,43 @@
 .card {
+  height: 180px;
+  width: 200px;
+  margin: 4px;
+  border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s; }
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+  transition: 0.5s; }
+  .card-top {
+    height: 100px; }
+    .card-top > img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%; }
+  .card-bottom {
+    padding: 4px;
+    text-align: center; }
+    .card-bottom > h4 {
+      height: 16px; }
+    .card-bottom > p {
+      text-align: center;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: horizontal;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 46px;
+      width: 100%;
+      white-space: pre;
+      position: relative;
+      font-size: 14px;
+      height: 3em;
+      overflow: hidden;
+      margin-bottom: 0; }
+      .card-bottom > p:after {
+        content: "";
+        text-align: right;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 50%;
+        height: 1.2em;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), white 80%); }
+    .card-bottom:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }

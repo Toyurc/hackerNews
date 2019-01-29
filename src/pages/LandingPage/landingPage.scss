@@ -12,28 +12,9 @@
 
 .background {
     margin: 0 auto;
-}
-
-
-p {
-    text-align: center;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 120px;
-    white-space: pre;
-}
-
-.card-width {
-    height: 200px;
-    width: 30%;
-    display: inline-block;
-    margin: 2px;
-
-    @media only screen and (max-width: 720px) {
-        width: 90%; 
-    }
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .image {

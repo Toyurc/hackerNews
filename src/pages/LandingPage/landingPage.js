@@ -40,16 +40,7 @@ class LandingPage extends React.Component {
                 <React.Fragment>
                     <div className="background" >
                         {this.state.news.map((props, index) => (
-                            <div className="card card-width" key={index}>
-                                <div className="image">
-                                    <img src={props.urlToImage} alt="alt" height="160px;" width="180px;" />
-                                </div>
-                                <div className="details">
-                                    <h4>{props.title}</h4>
-                                    <p>{props.description}</p>
-                                    <h6>{props.publishedAt}</h6>
-                                </div>
-                            </div>
+                            <Card key={index} props={props} />
                         ))
                         }
                     </div>

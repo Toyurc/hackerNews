@@ -1,12 +1,12 @@
 import React from 'react';
 import './card.css';
 
-const Card = (props) => (
+const Card = ({props}) => (
         <div className="card">
-            <div>
-                <img src={props.UrlToImage} alt="alt" />
+            <div className="card-top">
+                <img src={props.UrlToimage} alt="News" />
             </div>
-            <div>
+            <div className="card-bottom">
                 <h4>{props.title}</h4>
                 <p>{props.description}</p>
                 <h6>{props.publishedAt}</h6>
