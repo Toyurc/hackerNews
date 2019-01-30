@@ -20,7 +20,6 @@
       text-align: center;
       -webkit-line-clamp: 3;
       -webkit-box-orient: horizontal;
-      overflow: hidden;
       text-overflow: ellipsis;
       height: 46px;
       width: 100%;
