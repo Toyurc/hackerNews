@@ -23,6 +23,11 @@
 
         >h4 {
             height: 16px;
+            text-overflow: ellipsis;
+            text-align: center;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: horizontal;
+            overflow: hidden;
         }
 
         >p {

@@ -15,7 +15,12 @@
     padding: 4px;
     text-align: center; }
     .card-bottom > h4 {
-      height: 16px; }
+      height: 16px;
+      text-overflow: ellipsis;
+      text-align: center;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: horizontal;
+      overflow: hidden; }
     .card-bottom > p {
       text-align: center;
       -webkit-line-clamp: 3;
