@@ -34,12 +34,13 @@ class LandingPage extends React.Component {
     }
 
     render () {
+        const { news } = this.state
         return (
             <React.Fragment>
                 <NavBar/>
                 <React.Fragment>
                     <div className="background" >
-                        {this.state.news.map((props, index) => (
+                        { Array.isArray(news) && news.map((props, index) => (
                             <Card key={index} props={props} />
                         ))
                         }
